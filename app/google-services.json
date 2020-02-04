@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "293139388620",
+    "firebase_url": "https://projects-ceaa0.firebaseio.com",
+    "project_id": "projects-ceaa0",
+    "storage_bucket": "projects-ceaa0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293139388620:android:dd79cd90c01999d3cb0a69",
+        "android_client_info": {
+          "package_name": "com.chigo.beautyspot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293139388620-j6ivojen3mnbnvva2glqlft8ndn1vh87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_IwcMePQYYtEgyFbcT8rGJZFKQx9rvDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293139388620-j6ivojen3mnbnvva2glqlft8ndn1vh87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:293139388620:android:45ec8902d3d1d48bcb0a69",
+        "android_client_info": {
+          "package_name": "com.chigo.tracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "293139388620-ub0pjrk1p1avtethin1t4j73vef796sr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chigo.tracker",
+            "certificate_hash": "d2cdd8d2c3326bc05c4e7c8ded6731b0da1dc2ee"
+          }
+        },
+        {
+          "client_id": "293139388620-j6ivojen3mnbnvva2glqlft8ndn1vh87.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_IwcMePQYYtEgyFbcT8rGJZFKQx9rvDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "293139388620-j6ivojen3mnbnvva2glqlft8ndn1vh87.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
