@@ -1,27 +1,32 @@
 package com.chigo.beautyspot
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.WindowManager
+import android.widget.ImageView
+import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.chigo.beautyspot.ui.ListAdapter
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
-import com.android.volley.toolbox.JsonRequest
 import com.android.volley.toolbox.Volley
 import com.chigo.beautyspot.data.Details
-import com.google.gson.JsonObject
+import com.chigo.beautyspot.ui.ListAdapter
 import kotlinx.android.synthetic.main.activity_dummy.*
+import kotlinx.android.synthetic.main.list_item.*
 import org.json.JSONArray
 import org.json.JSONObject
+
+
 
 class DummyActivity : AppCompatActivity() {
     var adapter:ListAdapter?= null
 
     lateinit var requestQueue: RequestQueue
-    private var data:ArrayList<Details>?=null
+     private var data:ArrayList<Details>?=null
+   // lateinit var ratingsLayout: LinearLayout
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +40,14 @@ class DummyActivity : AppCompatActivity() {
 //        data!!.add(dis)
 //        adapter = ListAdapter(data!!)
         rv_list.adapter = adapter
+
+        //linear layout for stars
+        //ratingsLayout = findViewById(R.id.ratings_layout)
+
+        //val params: LinearLayout.LayoutParams =
+            //LinearLayout.LayoutParams(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT)
+
+
 
 
 
@@ -54,6 +67,7 @@ class DummyActivity : AppCompatActivity() {
                 //val openObject = jsonObject.getJSONObject("opening_hours")
                 val open = true //openObject.getBoolean("open_now")
                 val rating = jsonObject.getInt("rating")
+               // ratingBar.numStars = rating
                 val address = jsonObject.getString("vicinity")
 
                 data!!.add(Details(name, open, rating, address))
@@ -61,6 +75,8 @@ class DummyActivity : AppCompatActivity() {
             adapter = ListAdapter(data!!)
             rv_list.adapter = adapter
             adapter!!.notifyDataSetChanged()
+
+
 
 //            adapter!!.items = data
 
@@ -71,6 +87,23 @@ class DummyActivity : AppCompatActivity() {
 //        notifyDataSetChanged()
 
         requestQueue.add(request)
+        //setStars()
+    }
+
+    fun setStars(){
+        for(i in data!!.indices){
+            val cur = data!![i]
+            var no_of_stars:Int = cur.rating
+            for (i in 0 until no_of_stars){
+
+                var imageView = ImageView(this)
+                imageView.setImageResource(R.drawable.ic_ful_star)
+                //constraintLayout.addView(imageView)
+                //ratingsLayout.addView(imageView)
+
+            }
+        }
+
     }
 
 

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.TextureView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.chigo.beautyspot.R
@@ -33,6 +34,8 @@ class ListAdapter(var items: ArrayList<Details>) :
         holder.address.text  = current.address
         holder.rating.text = current.rating.toString()
 
+        holder.ratingBar.numStars  = current.rating
+
         if(current.open){
             holder.openStatus.text = "Open"
         }else{
@@ -45,6 +48,7 @@ class ListAdapter(var items: ArrayList<Details>) :
         val address  = view.findViewById<TextView>(R.id.services_textView)
         val openStatus = view.findViewById<TextView>(R.id.open_status)
         val rating = view.findViewById<TextView>(R.id.ratings)
+        val ratingBar = view.findViewById<RatingBar>(R.id.ratingBar)
     }
 
 
